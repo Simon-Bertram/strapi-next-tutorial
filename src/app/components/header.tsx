@@ -9,8 +9,8 @@ const links = [
 
 const Header = () => {
   return (
-    <header>
-      <nav>
+    <header className="bg-gray-200">
+      <nav className="container mx-auto flex justify-between items-center py-4">
         <Link href="/">Strapi & Nextjs Project</Link>
         <ul className="flex gap-4">
           {links.map((link) => (
