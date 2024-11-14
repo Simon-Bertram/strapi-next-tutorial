@@ -1,6 +1,6 @@
 import qs from "qs";
 
-import { BlockRenderer, TeamPageBlock } from "/src/app/components/blocks";
+import { BlockRenderer, TeamPageBlock } from "@/app/components/blocks";
 
 async function getTeamMember(slug: string) {
   const baseUrl = process.env.NEXT_PUBLIC_API ?? "http://localhost:1337";
@@ -81,7 +81,7 @@ export default async function TeamMemberDetail({
   return (
     <div>
       {teamMember.blocks.map((block: TeamPageBlock) => (
-        <BlockRenderer key={block.id} block={block} />
+        <BlockRenderer key={`${block.__component}-${block.id}`} block={block} />
       ))}
     </div>
   );

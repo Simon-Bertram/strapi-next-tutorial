@@ -20,10 +20,10 @@ export function RichTextBlock({ block }: { block: RichTextBlock }) {
         content={block.content}
         blocks={{
           image: ({ image }) => {
-            console.log("image: ", image);
+            console.log("image", image);
             if (!image) return null;
             return (
-              <div className="richtext">
+              <div className="my-4 flex justify-center">
                 <Image
                   src={image.url}
                   width={image.width || 800}
