@@ -5,7 +5,7 @@ import {
   type BlocksContent,
 } from "@strapi/blocks-react-renderer";
 import { ClientReferenceManifestPlugin } from "next/dist/build/webpack/plugins/flight-manifest-plugin";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export interface RichTextBlock {
   __component: "blocks.rich-text";
