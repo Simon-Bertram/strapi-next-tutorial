@@ -1,3 +1,14 @@
+Project Features
+Nav-link/Navbar pattern:
+Create a separate component for nav-links and their styling. It leverages Next.js's 
+usePathname hook to determine the current route and applies a CSS class to the active link to visually distinguish it. 
+Usage: 
+  const pathname = usePathname();
+  const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+Uses a cn utility function to conditionally apply CSS classes. Why 'cn'? ClassName?
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
